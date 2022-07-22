@@ -1,13 +1,17 @@
+import ru.eshtajee.bonus.service.BonusService;
+
 public class Main {
 
     public static void main(String[] args) {
         BonusService service = new BonusService();
 
-        long amount = 1000_60;
-        boolean registered = true;
+        int amount = 250;
+        boolean registered = false;
 
-        long bonus = service.calculate(amount, registered);
-        System.out.println(bonus);
+        int bonus = (int) service.calculate(amount, registered);
+        System.out.println();
+        System.out.println("Вам начислено "+bonus +" бонусов");
+
 
 
     }
